@@ -6,20 +6,24 @@ import react from '@vitejs/plugin-react'
 //   plugins: [react()],
 // })
 
-export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          [
-            'babel-plugin-styled-components',
-            {
-              displayName: true,
-              fileName: false
-            }
-          ]
-        ]
-      }
-    })
-  ]
-})
+plugins: [
+  // For all styled components:
+  // create classnames from fileName and displayName in development
+  react({
+    babel: {
+      presets: ['@babel/preset-typescript'],
+      plugins: [
+        '@babel/plugin-transform-typescript',
+        [
+          'babel-plugin-styled-components',
+          {
+            ssr: false,
+            pure: true,
+            displayName: true,
+            fileName: false,
+          },
+        ],
+      ],
+    },
+  }),
+];
