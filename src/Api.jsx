@@ -1,0 +1,1 @@
+export const REACT_APP_API_PORT ='https://masteradminowlok.onrender.com/'

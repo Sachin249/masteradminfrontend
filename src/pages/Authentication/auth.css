@@ -1,0 +1,114 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* width: 500px;
+    height: 300px; */
+    /* background: #f1f1f1; */
+    /* margin: 100px auto 0; */
+    word-break: break-all;
+    /* border: 1px solid rgba(0, 0, 0, 0.274); */
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+   /* color: red; */
+    padding: 15px;
+    text-align: center;
+    /* width: 50%; */
+    /* background: rgba(128, 128, 128, 0.075); */
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+    font-weight: 600;
+  }
+  /* .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  } */
+  
+  .active-tabs  {
+    background: #e5e7eb;
+    border-bottom: 1px solid transparent;
+    color:rgb(194,90,212);
+    /* font-size: 16px; */
+    font-weight: 600;
+  }
+  
+  .active-tabs::before {
+    content: "";
+    /* color: blue; */
+    display: block;
+    position: absolute;
+    /* top: -5px; */
+    bottom:0 ;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 1px;
+    background:rgb(194,90,212);
+  }
+  
+  
+/*   
+  button {
+    border: none;
+    
+  } */
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+    /* background: white; */
+    /* padding: 20px; */
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  /* .content h2 {
+    padding: 0px 0 px 0px;
+  } */
+  /* .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  } */
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: block;
+  }
+
+
+
+  @media only screen and (min-width: 40px){
+    .active-tabssmmd  {
+      /* background: #1e64cb; */
+      border-bottom: 1px solid transparent;
+      color:rgb(61, 42, 231);
+      /* font-size: 16px; */
+      font-weight: 600;
+    }
+
+    .active-tabssmmd::before {
+      content: "";
+      /* color: blue; */
+      display: block;
+      position: absolute;
+      /* top: -5px; */
+      bottom:0 ;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% + 2px);
+      height: 1px;
+      background:rgb(61, 42, 231);
+    }
+  }
+ 
